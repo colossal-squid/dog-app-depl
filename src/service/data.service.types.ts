@@ -12,6 +12,11 @@ export type RandomImageResponse = {
   status: string;
 }
 
+export type RandomImagesResponse = {
+  message: string[];
+  status: string;
+}
+
 export type DogSubBreedsListResponse = {
   message: string[];
   status: string;

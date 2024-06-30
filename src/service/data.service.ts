@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ConfigService } from './config.service';
-import { DogBreedsResponse, DogSubBreedsListResponse, RandomImageResponse } from './data.service.types';
+import { DogBreedsResponse, DogSubBreedsListResponse, RandomImageResponse, RandomImagesResponse } from './data.service.types';
 
 /**
  * This is a wrapper around
@@ -28,8 +28,8 @@ export class DataService {
     return this.http.get<RandomImageResponse>(`${this.apiUrl}/breeds/image/random`);
   }
 
-  public getImagesByBreed(breed: string): Observable<RandomImageResponse>{
-    return this.http.get<RandomImageResponse>(`${this.apiUrl}/breed/${breed}/images`);
+  public getImagesByBreed(query: string): Observable<RandomImagesResponse>{
+    return this.http.get<RandomImagesResponse>(`${this.apiUrl}/breed/${query}/images`);
   }
 
   public listAllSubBreeds(breed: string): Observable<DogSubBreedsListResponse>{

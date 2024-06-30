@@ -16,10 +16,7 @@ type NavbarItem = {
 })
 export class NavbarComponent {
   items: NavbarItem[]= [
-    { text: 'List all breeds', url: '#'},
-    { text: 'Random image', url: '#'},
-    { text: 'By breed', url: '#'},
-    { text: 'By sub-breed', url: '#'},
-    { text: 'Browse breed list', url: '#'},
+    { text: 'Explore', url: '/'},
+    { text: 'Random image', url: '/random'},
   ]
 }

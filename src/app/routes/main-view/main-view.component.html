@@ -1,1 +1,27 @@
-<p>main-view works!</p>
+<div class="flex w-full justify-items-center">
+
+  <div class="flex-1  flex flex-col">
+    <h2 class="text-xl mb-2">
+      Step-1: Choose dog breed ({{breed ?? 'all breeds'}})
+      </h2>
+    <app-list [value]="breed" (select)="updateRouteQueryParams({breed: $event})" [items]="breeds"/>
+  </div>
+
+  <div class="flex-1">
+    <h2 class="text-xl mb-2">
+  Step-2 (optional): Choose dog sub-breed ({{subbreed ?? '-'}})
+    </h2>
+    <app-list [value]="subbreed" (select)="updateRouteQueryParams({subbreed: $event})" [items]="subbreeds"/>
+  </div>
+
+  <div class="flex-6">
+    <h2 class="text-xl mb-2">
+  Step-3: Enjoy all {{urls.length}} pics!
+  </h2>
+    <pre>{{breed}} {{subbreed}}</pre>
+    <div class="grid grid-cols-3">
+      <app-image *ngFor="let url of urls" [loading]="loading" class="mx-auto flex w-64 h-64 pb-4" [src]="url" [alt]="'an image of a dog'"/>
+    </div>
+  </div>
+
+</div>
