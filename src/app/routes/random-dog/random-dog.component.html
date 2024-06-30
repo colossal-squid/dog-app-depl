@@ -1,5 +1,5 @@
 <div class="mx-auto flex flex-col max-w-80vw">
   <p class="mx-auto">Get lucky! Keep pressing "fetch" till you find the coolest-looking dog!</p>
-  <app-image [loading]="loading" class="mx-auto max-h-[80vh] pb-4" [src]="url" [alt]="'an image of a dog'" />
+  <app-image [loading]="loading" class="mx-auto h-[500px]  w-[500px] pb-4" [src]="url" [alt]="'an image of a dog'" />
   <app-button [loading]="loading" class="mx-auto" (click)="reloadData()">fetch</app-button>
 </div>
