@@ -1,6 +1,6 @@
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../../../service/data.service';
 import { DogBreeds } from '../../../service/data.service.types';
 import { ListComponent, ListItem } from '../../components/list/list.component';
@@ -16,7 +16,6 @@ type QueryParams = {
   standalone: true,
   imports: [CommonModule, ButtonComponent, ImageComponent, ListComponent],
   templateUrl: './main-view.component.html',
-  styleUrl: './main-view.component.css'
 })
 export class MainViewComponent {
   breeds: ListItem[] = []

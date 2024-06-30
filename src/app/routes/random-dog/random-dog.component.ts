@@ -8,8 +8,7 @@ import { ButtonComponent } from '../../components/button/button.component';
   selector: 'app-random-dog',
   standalone: true,
   imports: [ButtonComponent, ImageComponent],
-  templateUrl: './random-dog.component.html',
-  styleUrl: './random-dog.component.css'
+  templateUrl: './random-dog.component.html'
 })
 export class RandomDogComponent {
   public url: string = '';
