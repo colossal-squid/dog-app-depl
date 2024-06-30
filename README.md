@@ -1,5 +1,6 @@
 # dog.ceo viewer
 
+[open live version on netlify](https://mellow-platypus-968094.netlify.app/)
 
 This repo was forked from [https://github.com/netlify-templates/angular-starter](netlify-templates/angular-starter)
 

@@ -40,7 +40,7 @@ describe('DataService', () => {
   });
 
   it('can request breed image', () => {
-    service.getImagesByBreed('breed-name').subscribe(data => { });
+    service.getImagesByBreed({ breed: 'breed-name'}).subscribe(data => { });
     const req = httpTestingController.expectOne(`${cfg.getApiUrl()}/breed/breed-name/images`);
     expect(req.request.method).toEqual('GET');
     req.flush({});

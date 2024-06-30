@@ -80,8 +80,7 @@ export class MainViewComponent {
     if (!breed) {
       breed = this.breeds[0].value;
     }
-    const query = subbreed ? `${breed}/${subbreed}` : breed;
-    this.api.getImagesByBreed(query)
+    this.api.getImagesByBreed({breed, subbreed})
       .subscribe(response => {
         this.urls = response.message;
         this.loading = false;
